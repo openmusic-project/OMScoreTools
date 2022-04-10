@@ -181,8 +181,8 @@ If boundaries are transgressed, it's fine but not for constant bpfs."
                               )
   :initvals (list t t 'clone nil nil ) 
   :indoc '("voice" "bpf" "mode" "min" "max" )
-  :menuins '((2 (("clone" clone)
-                 ("destructive" destructive))))
+  :menuins '((2 (("clone" 'clone)
+                 ("destructive" 'destructive))))
   :icon 277
   :doc "Applies bpf as dynamic enveloppe on a voice. Bpfs are supposed to be between y=0-100 (included) most particulary if they are staight lines. If boundaries are transgressed, it's fine but not for constant bpfs. "
   (let* ((chords (if (equal mode 'clone) (clone (chords self)) (chords self)))
